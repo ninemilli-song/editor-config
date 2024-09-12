@@ -30,29 +30,16 @@ cmd + g f ： 打开一个文件
 cmd + g h ： 打开最近记录
 cmd + g n ： 新建vscode实例
 cmd + g q ： 关闭vscode示例
-cmd + f n ： 新建文件
-cmd + f o ： 打开文件
-cmd + f e ： 另存为文件
-cmd + f s ： 保存文件
-cmd + f w ： 保存所有文件
-cmd + f q ： 关闭文件
-cmd + f a ： 关闭所有文件
-cmd + n [ ： 切换侧边栏显示状态
-cmd + n 1 ： 显示文件资源管理器
-cmd + n 2： 显示TODOTree
-cmd + n 3： 显示全局搜索
-cmd + n 4： 显示debug
-cmd + n 5： 显示版本控制
-cmd + n 6： 显示SQL Tools
+```
+
+### 侧边栏（keybinding.json）
+
+```json
+cmd + b： 切换侧边栏显示状态(系统)
+cmd + shift + e： 显示文件资源管理器
+cmd + shift + t： 显示TODOTree
+cmd + shift + g： 显示版本控制
 cmd + n 7： 显示Docker
-cmd + n 8： 显示测试
-cmd + n 9： 显示插件商店
-cmd + p ]： 切换面板显示状态
-cmd + p 1： 显示问题
-cmd + p 2： 显示输出
-cmd + p 3： 显示终端
-cmd + p 4： 显示调试控制台
-cmd + p 5： 显示SQL CONSOLE
 ```
 
 ### 编辑区域操作(keybinding.json)
@@ -77,13 +64,12 @@ cmd + ctrl + <方向键> ：将编辑器移到到其它组
 cmd + h ： 触发帮助提示
 cmd + j ： 触发参数提示
 cmd + k ： 触发建议提示
-cmd + n ： 移动到下一个建议
-cmd + p ： 移动到上一个建议 
 tab ： 选择下一个建议 
 enter ： 选择当前建议
 cmd + alt + l ： 格式化代码（个人习惯）
 cmd + = ： 放大字体
 cmd + - ： 缩小字体
+shift + alt + F8：转到上一个问题（系统）
 ```
 
 ### 终端操作（keybinding.json）
@@ -96,10 +82,5 @@ cmd + t f : 聚焦到终端
 cmd + t e : 终端移动到编辑器
 cmd + t r : 终端移动到面板
 cmd + t q : 终止活动终端实例
-```
-
-## 系统配置
-
-```
 cmd + ` : 显示/隐藏终端
 ```
