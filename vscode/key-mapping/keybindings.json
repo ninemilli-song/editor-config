@@ -1,0 +1,434 @@
+// TODO: Remove
+
+// INFO: This
+
+// NOTE:`
+
+// BUG: This
+
+// FIXME: This
+
+// TAG: This
+
+// HACK: This
+
+// XXX: This
+
+// Place your key bindings in this file to override the defaultsauto[]
+[
+	// --- 资源管理器中对文件或目录的操作
+	// 新建文件
+	{
+		"key": "i",
+		"command": "explorer.newFile",
+		"when": " explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus "
+	},
+	// 新建目录
+	{
+		"key": "o",
+		"command": "explorer.newFolder",
+		"when": " explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus "
+	},
+	// 刷新资源管理器
+	{
+		"key": "r",
+		"command": "workbench.files.action.refreshFilesExplorer",
+		"when": " explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus "
+	},
+	// 重命名文件或目录
+	{
+		"key": "a",
+		"command": "renameFile",
+		"when": " explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus "
+	},
+	// 删除文件或目录
+	{
+		"key": "d",
+		"command": "deleteFile",
+		"when": " explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus "
+	},
+	// 剪切文件或目录
+	{
+		"key": "x",
+		"command": "filesExplorer.cut",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	// 复制文件或目录
+	{
+		"key": "y",
+		"command": "filesExplorer.copy",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+	},
+	// 粘贴文件或目录
+	{
+		"key": "p",
+		"command": "filesExplorer.paste",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "cmd+s",
+		"command": "workbench.action.files.saveFiles"
+	},
+	{
+		"key": "cmd+down",
+		"command": "-workbench.action.terminal.focus",
+		"when": "accessibilityModeEnabled && accessibleViewOnLastLine && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewOnLastLine && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
+	},
+	// focuse to explorer
+	{
+		"key": "ctrl+shift+e",
+		"command": "workbench.view.explorer",
+		"when": "viewContainer.workbench.view.explorer.enabled"
+	},
+	{
+		"key": "shift+cmd+e",
+		"command": "-workbench.view.explorer",
+		"when": "viewContainer.workbench.view.explorer.enabled"
+	},
+	{
+		"key": "ctrl+shift+e",
+		"command": "-cursorLineEndSelect",
+		"when": "textInputFocus"
+	},
+	// --- 全局命令
+	// 显示命令面板
+	{
+		"key": "cmd+g c",
+		"command": "workbench.action.showCommands"
+	},
+	// 打开设置页面
+	{
+		"key": "cmd+g s",
+		"command": "workbench.action.openSettings"
+	},
+	// 打开热键映射
+	{
+		"key": "cmd+g k",
+		"command": "workbench.action.openGlobalKeybindings"
+	},
+	// 打开一个目录
+	{
+		"key": "cmd+g m",
+		"command": "workbench.action.files.openFolder"
+	},
+	// 打开一个文件
+	{
+		"key": "cmd+g f",
+		"command": "workbench.action.files.openFile"
+	},
+	// 打开最近记录
+	{
+		"key": "cmd+g h",
+		"command": "workbench.action.openRecent"
+	},
+	// 新建vscode实例
+	{
+		"key": "cmd+g n",
+		"command": "workbench.action.newWindow"
+	},
+	// 关闭vscode实例
+	{
+		"key": "cmd+g q",
+		"command": "workbench.action.closeWindow"
+	},
+	// -- 侧边栏命令
+	// 显示文件资源管理器
+	{
+		"key": "cmd+shift+e ",
+		"command": "workbench.files.action.focusFilesExplorer"
+	},
+	// 显示TODO Tree
+	{
+		"key": "cmd+shift+t",
+		"command": "todo-tree-view.focus"
+	},
+	// 显示版本控制
+	{
+		"key": "cmd+shift+g",
+		"command": "workbench.view.scm",
+		"when": "workbench.scm.active"
+	},
+	// 显示Docker
+	{
+		"key": "cmd+shift+7",
+		"command": "workbench.view.extension.dockerView"
+	},
+	// --- 终端命令 ---
+	// 聚焦到终端tabs
+	{
+		"key": "cmd+t \\",
+		"command": "workbench.action.terminal.focusTabs",
+		"when": "terminalHasBeenCreated || terminalProcessSupported"
+	},
+	// 创建终端(编辑区右侧)
+	{
+		"key": "cmd+t c",
+		"command": "workbench.action.createTerminalEditorSide",
+		"when": "terminalProcessSupported"
+	},
+	// 创建终端
+	{
+		"key": "cmd+t n",
+		"command": "workbench.action.terminal.new",
+		"when": "terminalProcessSupported"
+	},
+
+	// 聚焦到终端
+	{
+		"key": "cmd+t f",
+		"command": "workbench.action.terminal.focus",
+		"when": "terminalProcessSupported"
+	},
+	// 终端移动到编辑器
+	{
+		"key": "cmd+t e",
+		"command": "workbench.action.terminal.moveToEditor",
+		"when": "terminalProcessSupported"
+	},
+	// 终端移动到面板
+	{
+		"key": "cmd+t r",
+		"command": "workbench.action.terminal.moveToTerminalPanel",
+		"when": "terminalProcessSupported"
+	},
+	// 终止活动终端实例
+	{
+		"key": "cmd+t q",
+		"command": "workbench.action.terminal.kill",
+		"when": "terminalProcessSupported"
+	},
+	// --- 编辑区命令
+	// 关闭当前选项卡或分屏
+	{
+		"key": "cmd+w q",
+		"command": "workbench.action.closeActiveEditor"
+	},
+	// 拆分一个上下分屏
+	{
+		"key": "cmd+w s",
+		"command": "workbench.action.splitEditorDown"
+	},
+	// 拆分一个左右分屏
+	{
+		"key": "cmd+w v",
+		"command": "workbench.action.splitEditor"
+	},
+	// 将光标向上动1屏
+	{
+		"key": "cmd+w k",
+		"command": "workbench.action.focusAboveGroup"
+	},
+	// 将光标向下动1屏
+	{
+		"key": "cmd+w j",
+		"command": "workbench.action.focusBelowGroup"
+	},
+	// 将光标向左移动1屏
+	{
+		"key": "cmd+w h",
+		"command": "workbench.action.focusLeftGroup"
+	},
+	// 将光标向右移动1屏
+	{
+		"key": "cmd+w l",
+		"command": "workbench.action.focusRightGroup"
+	},
+	// 关闭编辑器组
+	{
+		"key": "cmd+e q",
+		"command": "workbench.action.closeEditorsAndGroup"
+	},
+	// --- 代码编辑命令
+	// 触发帮助提示
+	{
+		"key": "ctrl+alt+h",
+		"command": "editor.action.showHover",
+		"when": "editorTextFocus"
+	},
+	// 触发参数提示
+	{
+		"key": "ctrl+alt+j",
+		"command": "editor.action.triggerParameterHints",
+		"when": "editorHasSignatureHelpProvider && editorTextFocus"
+	},
+	{
+		"key": "ctrl+alt+j",
+		"command": "closeParameterHints",
+		"when": "editorFocus && parameterHintsVisible"
+	},
+	// 触发建议提示
+	{
+		"key": "ctrl+alt+k",
+		"command": "editor.action.triggerSuggest",
+		"when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+alt+k",
+		"command": "hideSuggestWidget",
+		"when": "suggestWidgetVisible && textInputFocus"
+	},
+	// 格式化代码
+	{
+		"key": "ctrl+alt+l",
+		"command": "editor.action.formatDocument",
+		"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+	},
+	// 放大字体
+	{
+		"key": "cmd+=",
+		"command": "editor.action.fontZoomIn"
+	},
+	// 缩小字体
+	{
+		"key": "cmd+-",
+		"command": "editor.action.fontZoomOut"
+	},
+	// --- window 用户删除以下重映射，这里是为MAC用户准备的
+	{
+		"key": "cmd+r",
+		"command": "extension.vim_ctrl+r",
+		"when": "editorTextFocus && vim.active && vim.use<C-r> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+r",
+		"command": "-extension.vim_ctrl+r",
+		"when": "editorTextFocus && vim.active && vim.use<C-r> && !inDebugRepl"
+	},
+	{
+		"key": "cmd+a",
+		"command": "extension.vim_ctrl+a"
+	},
+	{
+		"key": "ctrl+a",
+		"command": "-extension.vim_ctrl+a",
+		"when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
+	},
+	{
+		"key": "cmd+x",
+		"command": "extension.vim_ctrl+x"
+	},
+	{
+		"key": "ctrl+x",
+		"command": "-extension.vim_ctrl+x",
+		"when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl"
+	},
+	{
+		"key": "cmd+u",
+		"command": "extension.vim_ctrl+u",
+		"when": "editorTextFocus && vim.active && vim.use<C-u> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+u",
+		"command": "-extension.vim_ctrl+u",
+		"when": "editorTextFocus && vim.active && vim.use<C-u> && !inDebugRepl"
+	},
+	{
+		"key": "cmd+d",
+		"command": "extension.vim_ctrl+d",
+		"when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+d",
+		"command": "-extension.vim_ctrl+d",
+		"when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
+	},
+	{
+		"key": "cmd+i",
+		"command": "extension.vim_ctrl+i",
+		"when": "editorTextFocus && vim.active && vim.use<C-i> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "-extension.vim_ctrl+i",
+		"when": "editorTextFocus && vim.active && vim.use<C-i> && !inDebugRepl"
+	},
+	{
+		"key": "cmd+o",
+		"command": "extension.vim_ctrl+o",
+		"when": "editorTextFocus && vim.active && vim.use<C-o> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+o",
+		"command": "-extension.vim_ctrl+o",
+		"when": "editorTextFocus && vim.active && vim.use<C-o> && !inDebugRepl"
+	},
+	// --- 取消一些vim插件的额外功能
+	{
+		"key": "cmd+a",
+		"command": "-extension.vim_cmd+a",
+		"when": "editorTextFocus && vim.active && vim.use<D-a> && !inDebugRepl && vim.mode != 'Insert'"
+	},
+	{
+		"key": "alt+cmd+down",
+		"command": "-extension.vim_cmd+alt+down",
+		"when": "editorTextFocus && vim.active && !inDebugRepl"
+	},
+	{
+		"key": "alt+cmd+up",
+		"command": "-extension.vim_cmd+alt+up",
+		"when": "editorTextFocus && vim.active && !inDebugRepl"
+	},
+	{
+		"key": "cmd+c",
+		"command": "-extension.vim_cmd+c",
+		"when": "editorTextFocus && vim.active && vim.overrideCopy && vim.use<D-c> && !inDebugRepl"
+	},
+	{
+		"key": "cmd+v",
+		"command": "-extension.vim_cmd+v",
+		"when": "editorTextFocus && vim.active && vim.use<D-v> && vim.mode == ''CommandlineInProgress' !inDebugRepl' || editorTextFocus && vim.active && vim.use<D-v> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+	},
+	{
+		"key": "cmd+d",
+		"command": "-extension.vim_cmd+d",
+		"when": "editorTextFocus && vim.active && vim.use<D-d> && !inDebugRepl"
+	},
+	{
+		"key": "cmd+left",
+		"command": "-extension.vim_cmd+left",
+		"when": "editorTextFocus && vim.active && vim.use<D-left> && !inDebugRepl && vim.mode != 'Insert'"
+	},
+	{
+		"key": "cmd+right",
+		"command": "-extension.vim_cmd+right",
+		"when": "editorTextFocus && vim.active && vim.use<D-right> && !inDebugRepl && vim.mode != 'Insert'"
+	},
+	// --- 取消或更改一些vscode键位
+	// cmd+a全选功能在非INSERT模式下不生效
+	{
+		"key": "cmd+a",
+		"command": "editor.action.selectAll",
+		"when": "vim.mode != 'Normal' && vim.mode != 'Visual' && vim.mode != 'VisualLine' && vim.mode != 'VisualBlock' && vim.mode != 'CommandlineInProgress'"
+	},
+	{
+		"key": "cmd+a",
+		"command": "-editor.action.selectAll"
+	},
+	// cmd+c或者cmd+v功能在非INSERT模式下不生效
+	{
+		"key": "cmd+c",
+		"command": "-editor.action.clipboardCopyAction"
+	},
+	{
+		"key": "cmd+v",
+		"command": "-editor.action.clipboardPasteAction"
+	},
+	{
+		"key": "cmd+c",
+		"command": "-execCopy"
+	},
+	{
+		"key": "cmd+c",
+		"command": "execCopy",
+		"when": "vim.mode != 'Normal' && vim.mode != 'Visual' && vim.mode != 'VisualLine' && vim.mode != 'VisualBlock' && vim.mode != 'CommandlineInProgress'"
+	},
+	{
+		"key": "cmd+v",
+		"command": "-execPaste"
+	},
+	{
+		"key": "cmd+v",
+		"command": "execPaste",
+		"when": "vim.mode != 'Normal' && vim.mode != 'Visual' && vim.mode != 'VisualLine' && vim.mode != 'VisualBlock' && vim.mode != 'CommandlineInProgress'"
+	}
+]
