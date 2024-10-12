@@ -45,16 +45,16 @@ cmd + n 7： 显示Docker
 ### 编辑区域操作(keybinding.json)
 
 ```
-cmd+ q ：关闭当前选项卡或分屏
-cmd+ w s ：拆分一个上下分屏
-cmd+ w v ：拆分一个左右分屏
-cmd+ w k ：将光标向上移动1屏
-cmd+ w j ：将光标向下移动1屏
-cmd+ w h ：将光标向左移动1屏
-cmd+ w l ：将光标向右移动1屏
+cmd + w q ：关闭当前选项卡或分屏
+ctrl + a - ：拆分一个上下分屏
+ctrl + a \ ：拆分一个左右分屏
+ctrl + a up ：将光标向上移动1屏
+ctrl + a down ：将光标向下移动1屏
+ctrl + a left ：将光标向左移动1屏
+ctrl + a right ：将光标向右移动1屏
 cmd + alt + <方向键> ：切换tab
 cmd + 1 ：切换到第一个编辑器组
-cmd + e q ：关闭编辑器组
+ctrl + a q ：关闭编辑器组
 cmd + ctrl + <方向键> ：将编辑器移到到其它组
 ```
 
